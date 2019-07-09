@@ -1,0 +1,22 @@
+{
+  "name": "birthdaynode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snipercool/birthday.git"
+  },
+  "author": "Nicolas Vanhuynegem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snipercool/birthday/issues"
+  },
+  "homepage": "https://github.com/snipercool/birthday#readme",
+  "dependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
