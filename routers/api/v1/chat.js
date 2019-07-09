@@ -1,15 +1,12 @@
 const express = require('express')
 const router = express.Router();
+const chatController = require('../../../controllers/api/v1/chat');
 
-router.get('/',(req, res) => {
-    res.send("get messages")
-  })
+//get   api/v1/message
+router.get('/',chatController.getAll);
   
-  //get   api/v1/message
   
   //post api/v1/message
-  router.post('/',(req, res) => {
-    res.send("get messages")
-  })
+  router.post('/',chatController.create);
 
   module.exports = router;
