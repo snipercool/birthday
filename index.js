@@ -1,26 +1,15 @@
-const http = require('http');
+const express = require('express')
+const date = require('./middleware/date')
+const app = express()
+const port = 3000
+const apiV1Birthdayrouter = require("./routers/birthdays/dates")
+const apiV1Chatrouter = require("./routers/api/v1/chat")
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.get('/', (req, res) => res.send('hello'))
+app.use('/birthdays', apiV1Birthdayrouter)
+app.use('/api/v1/chat', apiV1Chatrouter)
 
-const server = http.createServer((req, res) => {
-    console.log(res.url);
-    
-    res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-    switch (req.url) {
-        case "/signup":
-            res.end("signup");
-            
-            break;
-    
-        default:
-            res.end("default");
-            break;
-    }
-  
-});
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+
+
+app.listen(port, () => console.log(`example ${port}`))
