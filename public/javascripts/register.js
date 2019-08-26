@@ -21,5 +21,4 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
             window.location.href = "http://localhost:3000";
         }
     })
-    console.log(json);
 });

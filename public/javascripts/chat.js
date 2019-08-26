@@ -3,5 +3,10 @@ fetch("http://localhost:3000/api/v1/birthdays", {
 }).then(result =>{
     return result.json();
 }).catch(err =>{
-    console.log("Your token was fault").
+    console.log("Your token was fault");
 })
+
+//redirect if not logged in
+if (!localStorage.getItem("token")) {
+    window.location.href = "login";
+}
