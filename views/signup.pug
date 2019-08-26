@@ -5,16 +5,16 @@ block content
         h1 Sign up
         div.alert
         form()
-          div.form-group
+          div.form__group
             label.label(for='username') Username
             input.input(type='text' id='register_username' name='username')
-          div.form-group
+          div.form__group
             label.label(for='password') Password
             input.input(type='password' id='register_password' name='password')
-            div.form-group
+            div.form__group
             label.label(for='birthdate') Birthdate
             input.input(type='date' id='register-birthdate' name='birthdate')
-          button(type='button' id="register_button") Sign up
+          button.btn(type='button' id="register_button") Sign up
         p Already logged in before?  
           a(href='login') Log in here!
     script(src="/javascripts/register.js")

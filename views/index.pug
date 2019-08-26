@@ -1,10 +1,12 @@
 extends layout
 
 block content
+  div.container.container__chatbox
+  div.users
 block chatbox
-  form.chat(action="", method="post")
-    .chat__div
-      input.chat--input(type="text", name="question",placeholder="Ask a question (@bot to ask ai)")
-    .chat__div
-      input.chat--submit(type="submit", value="Verzend")  
+  div.form
+    form.chat(action="", method="post")
+      .chat__group
+        input.input.chat__input(type="text", name="question",placeholder="Ask a question (@bot to ask ai)")
+        input.btn.chat__btn(type="submit", value="Verzend")  
   
