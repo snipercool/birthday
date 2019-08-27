@@ -12,7 +12,7 @@ if (!localStorage.getItem("token")) {
 }
 
 //primus
-primus = Primus.connect("/", {
+primus = Primus.connect("/index", {
     reconnect: {
         max: Infinity,
         min: 500,

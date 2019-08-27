@@ -20,7 +20,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
         if (json.status === "success") {
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = "/";
+            window.location.href = "/index";
         }
     })
 });
