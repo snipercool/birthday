@@ -1,4 +1,3 @@
-const Primus = require('primus');
 //primus
 primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
     reconnect: {
