@@ -1,16 +1,20 @@
 const Primus = require('primus');
 
-let go = (server) => {
-   let primus = new Primus(server, {});
+const go = (server) => {
+  let primus = new Primus(server, {});
 
-    primus.on('connection', (spark) =>{
-        console.log('sparky');
-        
-        spark.on('data', (data) => {
-            primus.write(data);
-        });
+  primus.on('connection', (spark) => {
+    console.log('New spark connected');
+
+    spark.on('data', data => {
+      // primus.write(data);
+
+      primus.forEach((sparky, id, connection) => {
+        // Make sure only ppl with the same birthday get the message
+        if(sparky.query.bday == spark.query.bday){
+          sparky.write(data);
+        }
+      });
     });
-
-}
-
-module.exports.go = go;
+  })
+} 
