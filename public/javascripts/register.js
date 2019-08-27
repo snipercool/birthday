@@ -4,7 +4,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
     let username = document.querySelector("#register_username").value;
     let password = document.querySelector("#register_password").value;
     let birthdate = document.querySelector("#register-birthdate").value;
-    fetch('http://localhost:3000/users/signup', {
+    fetch('/signup', {
        method: "post",
        headers: {
            'Content-Type': 'application/json'
@@ -20,7 +20,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
         if (json.status === "success") {
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = process.env.baseuri || config.get('baseUrl.uri');
+            window.location.href = "/";
         }
     })
 });
