@@ -18,3 +18,4 @@ const go = (server) => {
     });
   })
 } 
+module.exports.go = go;
