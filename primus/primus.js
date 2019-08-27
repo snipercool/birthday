@@ -1,3 +1,4 @@
+
 const Primus = require('primus');
 
 const go = (server) => {
