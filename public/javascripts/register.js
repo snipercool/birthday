@@ -1,3 +1,5 @@
+const config = require('config');
+
 var btnSignup = document.querySelector("#register_button").addEventListener("click", () => {
     let username = document.querySelector("#register_username").value;
     let password = document.querySelector("#register_password").value;

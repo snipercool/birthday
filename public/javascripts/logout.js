@@ -1,3 +1,5 @@
+const config = require('config');
+
 var btnLogout = document.querySelector("#logout_button").addEventListener("click", () => {
 
     localStorage.removeItem("token");

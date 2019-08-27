@@ -1,3 +1,5 @@
+const config = require('config');
+
 fetch(process.env.baseuri + "/api/v1/birthdays" || config.get('baseUrl.uri') + "/api/v1/birthdays", {
     'headers': {'Authorization': 'Bearer ' + localStorage.getItem('token')}
 }).then(result =>{
