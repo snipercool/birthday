@@ -1,5 +1,5 @@
 //primus
-primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
+primus = Primus.connect("http://localhost:3000", {
     reconnect: {
         max: Infinity,
         min: 500,
