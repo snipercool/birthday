@@ -1,3 +1,5 @@
+
+
 fetch("/api/v1/birthdays", {
     'headers': {'Authorization': 'Bearer ' + localStorage.getItem('token')}
 }).then(result =>{
@@ -28,11 +30,11 @@ const showMessage = (json) =>{
 
 //redirect if not logged in
 if (!localStorage.getItem("token")) {
-    window.location.href = "http://localhost:3000";
+    window.location.href = "https://birthday-herexamen.herokuapp.com";
 }
 
 //primus
-primus = Primus.connect("birthday-herexamen.herokuapp.com", {
+primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
     reconnect: {
         max: Infinity,
         min: 500,
