@@ -1,7 +1,7 @@
 var btnSignin = document.querySelector("#login_button").addEventListener("click", () => {
     let username = document.querySelector("#login_username").value;
     let password = document.querySelector("#login_password").value;
-    fetch("/login", {
+    fetch('http://localhost:3000/users/login', {
        method: "post",
        headers: {
            'Content-Type': 'application/json'
@@ -14,7 +14,6 @@ var btnSignin = document.querySelector("#login_button").addEventListener("click"
         return response.json();
     }).then(json => {
         if (json.status === "success") {
-            
             let token = json.data.token;
             localStorage.setItem("token", token);
             window.location.href = "http://localhost:3000";

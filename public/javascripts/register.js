@@ -2,7 +2,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
     let username = document.querySelector("#register_username").value;
     let password = document.querySelector("#register_password").value;
     let birthdate = document.querySelector("#register-birthdate").value;
-    fetch('/signup', {
+    fetch('http://localhost:3000/users/signup', {
        method: "post",
        headers: {
            'Content-Type': 'application/json'
@@ -21,4 +21,5 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
             window.location.href = "http://localhost:3000";
         }
     })
+    console.log(json);
 });
