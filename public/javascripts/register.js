@@ -18,7 +18,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
         if (json.status === "success") {
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = "http://localhost:3000";
+            window.location.href = process.env.baseuri || config.get('baseUrl.uri');
         }
     })
 });

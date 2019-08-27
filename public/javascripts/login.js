@@ -17,7 +17,7 @@ var btnSignin = document.querySelector("#login_button").addEventListener("click"
             
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = "http://localhost:3000";
+            window.location.href = process.env.baseuri || config.get('baseUrl.uri');
         }
     })
 });
