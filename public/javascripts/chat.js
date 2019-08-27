@@ -1,4 +1,11 @@
-
+//primus
+primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
+    reconnect: {
+        max: Infinity,
+        min: 500,
+        retries: 10
+    }
+});
 
 fetch("/api/v1/birthdays", {
     'headers': {'Authorization': 'Bearer ' + localStorage.getItem('token')}
@@ -32,16 +39,6 @@ const showMessage = (json) =>{
 if (!localStorage.getItem("token")) {
     window.location.href = "https://birthday-herexamen.herokuapp.com";
 }
-
-//primus
-primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
-    reconnect: {
-        max: Infinity,
-        min: 500,
-        retries: 10
-    }
-});
-
 
 
 
