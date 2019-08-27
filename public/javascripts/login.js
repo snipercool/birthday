@@ -1,7 +1,7 @@
 var btnSignin = document.querySelector("#login_button").addEventListener("click", () => {
     let username = document.querySelector("#login_username").value;
     let password = document.querySelector("#login_password").value;
-    fetch('http://localhost:3000/users/login', {
+    fetch(process.env.baseuri + "/login" || config.get('baseUrl.uri') + "/login", {
        method: "post",
        headers: {
            'Content-Type': 'application/json'
