@@ -23,7 +23,7 @@ const create = (req, res) =>{
     }) 
 }
 const getAll = (req, res) =>{
-    Birthday.find({"user": "Nicolas"}, (err, docs) =>{
+    Birthday.find(localStorage.getItem("username"), (err, docs) =>{
         if(!err){
             res.json({
                 "status": "succes",
