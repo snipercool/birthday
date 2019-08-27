@@ -34,13 +34,15 @@ if (!localStorage.getItem("token")) {
 }
 
 //primus
-primus = Primus.connect("/", {
+primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
     reconnect: {
         max: Infinity,
         min: 500,
         retries: 10
     }
 });
+
+
 
 
 var chat = document.querySelector("#chat_submit").addEventListener("click", () => {
