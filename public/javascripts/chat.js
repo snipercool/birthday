@@ -57,7 +57,7 @@ var chat = document.querySelector("#chat_submit").addEventListener("click", () =
     }).then(json => {
        chatInput.value="";
        primus.write({
-           "action"= "createMessage",
+           "action": "createMessage",
            "data": json
        })
     })
