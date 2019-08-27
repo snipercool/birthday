@@ -28,7 +28,7 @@ const showMessage = (json) =>{
 
 //redirect if not logged in
 if (!localStorage.getItem("token")) {
-    window.location.href = "login";
+    window.location.href = "http://localhost:3000";
 }
 
 //primus
