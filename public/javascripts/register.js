@@ -18,7 +18,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
         if (json.status === "success") {
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = "birthday-herexamen.herokuapp.com";
+            window.location.href = "localhost:3000/";
         }
     })
 });

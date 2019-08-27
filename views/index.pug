@@ -7,8 +7,8 @@ block chatbox
   div.form
     form.chat(action="", method="post")
       .chat__group
-        input.input.chat__input(type="text", name="question",placeholder="Ask a question (@bot to ask ai)")
-        input.btn.chat__btn(type="submit", value="Verzend") 
+        input.input.chat__input(type="text", id="chat__input" name="question",placeholder="")
+        input.btn.chat__btn(type="submit", id="chat_submit" value="Verzend") 
   button.btn.logout__btn(type='button' id="logout_button") Logout 
   script(src="/javascripts/logout.js")
   script(src="/javascripts/chat.js")
