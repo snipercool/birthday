@@ -7,6 +7,12 @@ primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
     }
 });
 
+primus.on('data', (json) => {
+    if (json.action === "createMessage") {
+        showMessage(json.data);
+    }
+});
+
 fetch("/api/v1/birthdays", {
     'headers': {'Authorization': 'Bearer ' + localStorage.getItem('token')}
 }).then(result =>{
