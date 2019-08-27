@@ -2,7 +2,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
     let username = document.querySelector("#register_username").value;
     let password = document.querySelector("#register_password").value;
     let birthdate = document.querySelector("#register-birthdate").value;
-    fetch('https://birthday-herexamen.herokuapp.com/users/signup', {
+    fetch('/users/signup', {
        method: "post",
        headers: {
            'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ var btnSignup = document.querySelector("#register_button").addEventListener("cli
         if (json.status === "success") {
             let token = json.data.token;
             localStorage.setItem("token", token);
-            window.location.href = "https://birthday-herexamen.herokuapp.com";
+            window.location.href = "/";
         }
     })
     console.log(json);

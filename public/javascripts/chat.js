@@ -34,7 +34,7 @@ if (!localStorage.getItem("token")) {
 }
 
 //primus
-primus = Primus.connect("https://birthday-herexamen.herokuapp.com", {
+primus = Primus.connect("/", {
     reconnect: {
         max: Infinity,
         min: 500,
