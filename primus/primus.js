@@ -12,7 +12,7 @@ const go = (server) => {
 
       primus.forEach((sparky, id, connection) => {
         // Make sure only ppl with the same birthday get the message
-        if(sparky.query.bday == spark.query.bday){
+        if(sparky.query.birthday == spark.query.birthday){
           sparky.write(data);
         }
       });

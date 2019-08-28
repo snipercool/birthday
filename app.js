@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-var app = express();
-=======
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -33,7 +21,6 @@ mongoose.connect(process.env.dbconn || config.get('Database.conn'), {
 const app = express();
 
 express.static("/", {index: "login"});
->>>>>>> bba63df795c77856d0214b287011adbdd731fba2
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -45,15 +32,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-<<<<<<< HEAD
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-=======
 app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/v1/birthdays', passport.authenticate('jwt', { session: false}), apiBirthdayRouter);
->>>>>>> bba63df795c77856d0214b287011adbdd731fba2
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -71,8 +53,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> bba63df795c77856d0214b287011adbdd731fba2
 module.exports = app;

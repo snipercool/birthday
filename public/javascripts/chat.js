@@ -1,5 +1,5 @@
 //primus
-primus = Primus.connect("http://localhost:3000", {
+primus = Primus.connect("/users/signup", {
     reconnect: {
         max: Infinity,
         min: 500,
@@ -25,7 +25,7 @@ fetch("/api/v1/birthdays", {
             <p class="chat__text">${text.chat}</p>
         </div>
         `
-        
+        console.log(json.data.birthday);
     });
 }).catch(err =>{
     console.log("Your token was fault");
