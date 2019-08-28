@@ -1,5 +1,21 @@
 extends layout
 
 block content
+<<<<<<< HEAD
   h1= title
   p Welcome to #{title}
+=======
+  div.container.container__chatbox
+  div.users
+block chatbox
+  div.form
+    form.chat()
+      .chat__group
+        input.input.chat__input(type="text", id="chat__input" name="question",placeholder="")
+        input.btn.chat__btn(type="submit", id="chat_submit" value="Verzend") 
+  button.btn.logout__btn(type='button' id="logout_button") Logout 
+  script(src="/javascripts/logout.js")
+  script(src="/javascripts/chat.js")
+  script(src="https://birthday-herexamen.herokuapp.com/primus/primus.js")
+  
+>>>>>>> bba63df795c77856d0214b287011adbdd731fba2

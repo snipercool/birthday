@@ -8,6 +8,10 @@ var app = require('../app');
 var debug = require('debug')('birthday:server');
 var http = require('http');
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bba63df795c77856d0214b287011adbdd731fba2
 /**
  * Get port from environment and store in Express.
  */
@@ -20,6 +24,10 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+<<<<<<< HEAD
+=======
+const primus = require('../primus/primus').go(server);
+>>>>>>> bba63df795c77856d0214b287011adbdd731fba2
 
 /**
  * Listen on provided port, on all network interfaces.
