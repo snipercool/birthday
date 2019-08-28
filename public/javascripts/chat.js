@@ -43,7 +43,7 @@ const showMessage = (json) =>{
 
 //redirect if not logged in
 if (!localStorage.getItem("token")) {
-    window.location.href = "https://birthday-herexamen.herokuapp.com";
+    window.location.href = "https://birthday-herexamen.herokuapp.com/login";
 }
 
 
